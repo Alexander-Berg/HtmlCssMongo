@@ -1,0 +1,568 @@
+/* Starter */
+body{
+    background-color: black;
+}
+h1{
+    color: white;
+}
+#p1{
+    color:red;
+}
+#p2{
+    color:orange;
+}
+#p3{
+    color:yellow;
+}
+#p4{
+    color:green;
+}
+
+/* Colors */
+body{
+    background-color: hsl(0, 0%, 11%);
+}
+#p1{
+    color: tomato;
+}
+#p2{
+    color: rgb(102, 222, 255)
+}
+#p3{
+    color: #59ff5f;
+}
+#p4{
+    color: hsl(283, 100%, 64%);
+}
+
+/* Fonts */
+@font-face{
+    src: url(fonts/Roboto-Light.ttf);
+    font-family: Roboto-Light;
+}
+@font-face{
+    src: url(fonts/OpenSans-VariableFont_wdth,wght.ttf);
+    font-family: OpenSans;
+}
+h1{
+    font-family: Roboto-Light, verdana, arial;
+}
+p{
+    font-family: OpenSans, "lucida console", "courier new";
+    font-size: 1em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Borders */
+h1{
+    border: 3px solid hsl(262, 100%, 56%);
+    border-radius: 20px;
+}
+p{
+    border-bottom: 3px solid red;
+    border-top: 3px solid orange;
+    border-left: 3px dotted yellow;
+    border-right: 3px dotted green;
+    border-radius: 10px;
+}
+
+/* shadows */
+h1{
+    text-shadow: 5px 5px 2px hsl(0, 100%, 61%), -5px -5px 2px hsl(197, 100%, 61%);
+}
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: hsl(0, 0%, 92%);
+    box-shadow: 3px 3px 5px;
+}
+
+/* Margins*/
+body{
+    margin: 0px;
+}
+.box{
+    border: 5px solid;
+    font-size: 5em;
+    width: 250px;
+    height: 250px;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+#box1{
+    background-color: hsl(0, 100%, 60%);
+}
+#box2{
+    background-color: hsl(189, 100%, 55%);
+}
+
+/* Float */
+body{
+    border: 3px solid;
+    display: flow-root;
+}
+#img1{
+    float: left;
+    margin-right: 10px;
+}
+#img2{
+    float: right;
+    margin-left: 10px;
+}
+/* overflow */
+div{
+    border: 2px solid;
+    height: 75px;
+
+    /*
+    overflow: visible;
+    overflow: hidden;
+    overflow: clip;
+    overflow: scroll;
+    overflow: auto;
+    */
+}
+
+/* display property */
+div{
+    background-color: hsl(0, 100%, 75%);
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+span{
+    background-color: hsl(204, 100%, 75%);
+    width: 100px;
+    height: 100px;
+    display: inline;
+}
+
+/* for high and width */
+* {
+    box-sizing: border-box;
+}
+.container{
+    background-color: hsl(0, 0%, 24%);
+    height: 100vh;
+}
+.box{
+    background-color: hsl(0, 0%, 100%);
+    border: 2px solid;
+    padding: 25px;
+    height: auto;
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+/* For CSS positions */
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: hsl(188, 100%, 63%);
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+#box2{
+    width: 100px;
+    height: 100px;
+    background-color: hsl(0, 100%, 63%);
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+
+/* Background Image */
+body{
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Combinators */
+#container{
+    border: 2px solid;
+}
+
+
+/* descendant 
+#container p{
+    background-color: hsl(60, 100%, 70%);
+}
+*/
+
+/* child
+#container > p{
+    background-color: hsl(60, 100%, 70%);
+}
+*/
+
+/* general sibling
+#container ~ p{
+    background-color: hsl(60, 100%, 70%);
+}
+*/
+
+/* adjacent sibling
+#container + p{
+    background-color: hsl(60, 100%, 70%);
+}
+*/
+
+/*Pseudoclasses*/
+#greeting p{
+    background-color: hsl(196, 100%, 81%);
+    padding: 10px;
+    display: none;
+}
+#greeting:hover p{
+    display: block;
+}
+
+/*Pseudo-elements*/
+
+h1::first-letter{
+    font-size: 2em;
+    font-style: italic;
+}
+p::first-line{
+    background-color: hsl(60, 100%, 77%);
+}
+p::selection{
+    color: rgb(89, 255, 71);
+    background-color: hsl(0, 0%, 21%);
+}
+
+#apple::after{
+    content: "🍎";
+}
+#orange::after{
+    content: "🍊";
+}
+#banana::after{
+    content: "🍌";
+}
+#fruit li::marker{
+    content: "✔";
+    color: hsl(120, 100%, 64%);
+    font-size: 1.2em;
+}
+
+/* Pagination */
+.pagination{
+    text-align: center;
+}
+.pagination a{
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+}
+.pagination a.active{
+    background-color: hsl(120, 100%, 70%);
+    font-weight: bold;
+    border-radius: 5px;
+}
+.pagination a:hover:not(.active){
+    background-color: hsl(0, 0%, 77%);
+    border-radius: 5px;
+}
+
+/* Dropdown Menus */
+.dropdown{
+    display: inline-block;
+}
+.dropdown button{
+    background-color: hsl(0, 0%, 80%);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 0%, 95%);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+}
+.dropdown:hover .content{
+    display: block;
+}
+.dropdown:hover button{
+    background-color: hsl(0, 0%, 70%);
+}
+.dropdown a:hover{
+    background-color: hsl(0, 0%, 90%);
+}
+
+
+/* Navigation Bar*/
+body{
+    margin: 0px;
+}
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1{
+    text-align: center;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: hsl(0, 0%, 10%);
+}
+.navbar li{
+    float: left;
+}
+
+
+/* website layout */
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+header{
+    background-color: hsl(0, 0%, 86%);
+    text-align: center;
+    padding: 25px;
+}
+.navbar{
+    background-color: hsl(0, 0%, 15%);
+    height: 50px;
+}
+aside{
+    width: 20%;
+    float: left;
+    padding: 10px;
+}
+section{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+article{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+footer{
+    display: block;
+    clear: both;
+    background-color: hsl(0, 0%, 86%);
+    text-align: center;
+    padding: 25px;
+}
+@media screen and (max-width:600px){
+    aside, section, article{
+        width: 100%;
+    }
+}
+
+
+/* image gallery */
+
+.gallery{
+    display: inline-block;
+    border: 1px solid hsl(0, 0%, 60%);
+    margin: 5px;
+    width: 200px;
+}
+.gallery .description{
+    padding: 10px;
+    text-align: center;
+}
+.gallery:hover{
+    border: 1px solid hsl(0, 0%, 20%);
+}
+.gallery img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* Icons */
+
+.icons{
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    margin-right: 20px;
+}
+.fa-solid.fa-house.fa-5x{
+    color: hsl(0, 0%, 66%);
+}
+.fa-solid.fa-house.fa-5x:hover{
+    color: hsl(0, 0%, 76%);
+}
+.fa-brands.fa-twitter.fa-5x{
+    color: hsl(188, 100%, 50%);
+}
+.fa-brands.fa-twitter.fa-5x:hover{
+    color: hsl(188, 100%, 60%);
+}
+.fa-brands.fa-youtube.fa-5x{
+    color: hsl(0, 100%, 50%);
+}
+.fa-brands.fa-youtube.fa-5x:hover{
+    color: hsl(0, 100%, 60%);
+}
+.fa-brands.fa-tiktok.fa-5x{
+    color: hsl(0, 0%, 10%);
+}
+.fa-brands.fa-tiktok.fa-5x:hover{
+    color: hsl(0, 0%, 30%);
+}
+
+/* Flexbox */
+
+.container{
+    display: flex;
+    height: 90vh;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    font-size: 8em;
+    text-align: center;
+    border-radius: 15px;
+}
+#box1{
+    background-color: hsl(0, 100%, 70%);
+}
+#box2{
+    background-color: hsl(52, 100%, 70%);
+}
+#box3{
+    background-color: hsl(111, 100%, 70%);
+}
+#box4{
+    background-color: hsl(201, 100%, 70%);
+}
+
+/* Transformations */
+
+img{
+    transform: translate(200px) scaleX(3) rotate(180deg);
+}
+.box{
+    	border: 5px solid;
+	width: 250px;
+	height: 250px;
+	font-size: 13em;
+	text-align: center;
+    	transform: translate(50px, 50px) rotate(45deg);
+    
+    /*
+	transform: translateX(50px);
+	transform: translateY(50px);
+	transform: translate(50px, 50px);
+	transform: rotateX(180deg);
+	transform: rotateY(180deg);
+	transform: rotateZ(180deg);
+	transform: scaleX(2);
+	transform: scaleY(2);
+	transform: scale(2, 0.5);
+	transform: skewX(45deg);
+	transform: skewY(45deg);
+	transform: skew(20deg, 20deg);
+    */
+}
+#box1{
+	background:hsl(154, 100%, 69%);
+}
+#box2{
+	background:hsl(0, 100%, 69%);
+}
+#box3{
+	background:hsl(222, 100%, 69%);
+}
+
+
+/* Animations */
+
+body{
+    background-color: hsl(0, 0%, 12%);
+}
+#box{
+    width: 250px;
+    height: 250px;
+    background-color: hsl(0, 100%, 62%);
+    font-size: 13em;
+    text-align: center;
+}
+img{
+    animation-name: slideLeft;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-timing-function: cubic-bezier(0.28,-1.48, 0.54, 2.21);
+}
+
+@keyframes slideLeft{
+    from{transform: translateX(300%)}
+}
+@keyframes slideRight{
+    to{transform: translateX(300%)}
+}
+@keyframes slideUp{
+    from{transform: translateY(300%)}
+}
+@keyframes slideDown{
+    to{transform: translateY(300%)}
+}
+@keyframes rotate{
+    50%{transform: rotateZ(360deg)}
+}
+@keyframes grow{
+    50%{transform: scale(2, 2)}
+}
+@keyframes shrink{
+    50%{transform: scale(0.5, 0.5)}
+}
+@keyframes fade{
+    100%{opacity: 1}
+}
+@keyframes colorChange{
+    0%{background-color: hsl(0, 100%, 62%)}
+    20%{background-color: hsl(35, 100%, 62%)}
+    40%{background-color: hsl(63, 100%, 62%)}
+    60%{background-color: hsl(103, 100%, 62%)}
+    80%{background-color: hsl(201, 100%, 62%)}
+    100%{background-color: hsl(268, 100%, 62%)}
+}
+@keyframes glow{
+    50%{box-shadow: 0px 0px 50px hsl(60, 100%, 64%)}
+}
